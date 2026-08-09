@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 }
 
 html {
@@ -27,6 +28,7 @@ html {
     font-weight: bold;
     font-size: 23px;
     color: rgb(255, 255, 255);
+    width: 110px;
 }
 
 input {
@@ -38,13 +40,12 @@ input {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px 20px 50px;
-
     position: relative;
     z-index: 1000;
     background-color: #b83131;
-
     position: fixed;
     width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.169);
 }
 
 /* Menu */
@@ -90,6 +91,7 @@ input {
 .img-banner {
     position: relative;
     margin-bottom: 100px;
+    margin-top: 50px;
 }
 
 .desc-banner {
@@ -123,13 +125,13 @@ input {
     padding: 10px 15px 10px 15px;
     background-color: yellow;
     border-radius: 100px;
+    margin-right: 10px;
 }
 
 .desc-banner>div>button:nth-child(2) {
     background-color: transparent;
     border: 1px solid white;
     padding: 10px 15px 10px 15px;
-
 
 }
 
@@ -140,7 +142,6 @@ input {
 .titel-banner {
     display: none;
 }
-
 
 .mark img {
     opacity: 0.3;
@@ -178,8 +179,26 @@ input {
 /* cars */
 #cars {
     padding-left: 50px;
+    padding-right: 50px;
     font-weight: bold;
     font-size: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cars>button {
+    background-color: #b83131;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.cars>button {
+    display: none;
 }
 
 .main-article {
@@ -199,6 +218,7 @@ input {
     margin-bottom: 13px;
     box-shadow: 1px 2px 6px 1px rgba(128, 128, 128, 0.299);
     width: 100%;
+    max-width: 500px;
     border-radius: 8px 8px 0 0;
     height: 280px;
 
@@ -234,7 +254,7 @@ input {
 .sub-article p {
     line-height: 1.7;
     color: gray;
-    font-size: 18px;
+    font-size: 1.1em;
 }
 
 .info {
@@ -243,7 +263,7 @@ input {
     width: 100%;
     padding: 10px;
     padding-left: 15px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 1px 2px 6px 1px rgba(128, 128, 128, 0.299);
 
     display: flex;
@@ -382,4 +402,80 @@ footer {
 
 .Social-media {
     margin-bottom: 10px;
+}
+
+/* __________ Go back Footer __________*/
+
+.project-footer {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+
+
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+}
+
+/* Brand */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-symbol {
+    font-size: 18px;
+    color: #643ca1;
+}
+
+.footer-brand p {
+    margin: 0 0 4px;
+    font-size: 15px;
+    color: #888;
+}
+
+.footer-brand a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: #643ca1;
+
+    transition: 0.3s;
+}
+
+.footer-brand a:hover {
+    color: #3cfe2e;
+}
+
+/* Back button */
+.back-link {
+
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #643ca1;
+    transform: translateX(-4px);
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    .project-footer {
+        flex-direction: column;
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .footer-brand {
+        justify-content: left;
+    }
+
 }
